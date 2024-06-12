@@ -1,0 +1,164 @@
+:root {
+  --primary-color: #007BFF;
+  --primary-color-hover: #0056b3; /* Color hover manual */
+  --secondary-color: #f8f9fa;
+  --text-color: #343a40;
+  --background-color: #e9ecef;
+  --border-radius: 10px;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--primary-color-hover); /* Usando la variable de color hover */
+}
+
+#recipeResults {
+  margin-top: 20px;
+}
+
+.recipe {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipe img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-right: 20px;
+}
+
+.recipe h3 {
+  margin: 0;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.recipe-details {
+  margin-top: 10px;
+  border-top: 1px solid var(--background-color);
+  padding-top: 10px;
+}
+
+.recipe ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recipe ul li {
+  margin-bottom: 5px;
+}
+
+.favorites {
+  background-color: var(--background-color);
+  padding: 10px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.favorites li {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.favorites button {
+  padding: 5px 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.favorites button:hover {
+  background-color: var(--primary-color-hover); /* Usando la variable de color hover */
+}
+
+/* Consultas de medios para dispositivos móviles */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  input {
+    max-width: 100%;
+  }
+
+  .recipe img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .recipe h3 {
+    font-size: 1em;
+  }
+
+  button, .favorites button {
+    font-size: 0.9em;
+  }
+}
